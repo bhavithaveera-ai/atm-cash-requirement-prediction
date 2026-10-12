@@ -1,0 +1,46 @@
+{
+  "dataset_path": "C:\\Users\\bhavi\\OneDrive\\Desktop\\atmcashrequiremnet\\datasets\\synthetic_atm_daily_data.csv",
+  "dataset_rows": 1824,
+  "dataset_columns": [
+    "Date",
+    "ATM_ID",
+    "Location",
+    "Withdrawals",
+    "Deposits",
+    "DayOfWeek",
+    "IsHoliday",
+    "WeatherImpact",
+    "day_of_month",
+    "month",
+    "year",
+    "day_of_week",
+    "lag_1",
+    "lag_7",
+    "rolling_3",
+    "rolling_7"
+  ],
+  "date_range": {
+    "start": "2023-01-01",
+    "end": "2023-12-31"
+  },
+  "atm_count": 5,
+  "locations": [
+    "Rural",
+    "Urban"
+  ],
+  "selected_model": "RandomForestRegressor",
+  "model_name": "RandomForestRegressor",
+  "baseline_metrics": {
+    "mae": 3493.7622672688176,
+    "rmse": 4324.196929494454,
+    "r2_score": -0.00010558915268998881
+  },
+  "model_metrics": {
+    "mae": 2651.889410958904,
+    "rmse": 3085.0766660144413,
+    "r2_score": 0.4909424907736578
+  },
+  "train_rows": 1459,
+  "test_rows": 365,
+  "notes": "Synthetic daily ATM model was trained on 2023 data only for demonstration purposes; it does not represent a verified RBI or INR-denominated forecast."
+}
