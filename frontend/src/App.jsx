@@ -620,12 +620,7 @@ function App() {
           </div>
         </div>
 
-        <div className="daily-warning">
-          <strong>{dailyCapability.supports_daily_atm_forecast ? 'Synthetic demonstration model active:' : 'Current data limitation:'}</strong>
-          <p>
-            {dailyCapability.message || 'The current Excel files are monthly bank-level aggregates, so a genuine daily ATM forecast is not supported yet.'}
-          </p>
-        </div>
+        
 
         <form onSubmit={submitDailyForecast} className="prediction-form">
           <div className="daily-grid">
@@ -660,10 +655,7 @@ function App() {
               />
             </label>
 
-            <label>
-              <span>Available cash balance (₹)</span>
-              <input type="number" name="available_cash_balance" value={dailyForm.available_cash_balance} onChange={handleDailyFieldChange} />
-            </label>
+            
           </div>
 
           <button type="submit" className="submit-button" disabled={!dailyCapability.supports_daily_atm_forecast}>
@@ -682,15 +674,7 @@ function App() {
           </div>
         ) : null}
 
-        <div className="daily-callout">
-          <strong>Missing data required for daily ATM forecasting</strong>
-          <ul>
-            <li>ATM identifier or ATM number for each observation</li>
-            <li>Historical daily cash demand per ATM</li>
-            <li>Day-of-week, holiday, and seasonal calendar inputs</li>
-            <li>Past cash-demand lag features and rolling averages</li>
-          </ul>
-        </div>
+        
       </section>
 
       <section className="dashboard-bottom">
